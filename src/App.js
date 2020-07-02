@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import Login from './components/Login'
+import Notfound from './components/Notfound'
+import Home from './components/Home'
+import Paper from '@material-ui/core/Paper';
+import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Paper elevation={3}>
+          <Switch>
+            <Route exact path="/Login" component={Login}/>
+            <Route path="/Home" component={Home}/>
+            <Route component={Notfound}/>
+          </Switch>
+        </Paper>
+        
+      </div>
+    </Router>
+
   );
-}
+};
 
 export default App;

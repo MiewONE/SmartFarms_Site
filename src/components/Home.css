@@ -1,0 +1,40 @@
+ul{
+    list-style: none;
+    padding-left: 20%;
+}
+span{
+    text-align: center;
+}
+.body {
+    display: flex;
+    height: 20%;
+    /* background-color: darkturquoise; */
+}
+.left_top img{
+    width: 100%;
+    
+    margin-top: 10px;
+    margin-left : 5%;
+}
+.body .left{
+    float :left;
+    width:20%;
+    max-width: 193px;
+    
+    
+}
+.left_top{
+    background-color: darkkhaki;
+    height: 22%;
+    width: 193px;
+    max-width: 193px;
+}
+.right_top {
+    width: 100%;
+}
+
+.body .right{
+    float :left;
+    width:70%;
+    /* background-color: goldenrod; */
+}
