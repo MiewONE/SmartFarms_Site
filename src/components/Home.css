@@ -18,16 +18,16 @@ span{
 }
 .body .left{
     float :left;
-    width:20%;
-    max-width: 193px;
+    width:40%;
+    max-width: 220px;
     
     
 }
 .left_top{
     background-color: darkkhaki;
     height: 22%;
-    width: 193px;
-    max-width: 193px;
+    width: 220px;
+    max-width: 220px;
 }
 .right_top {
     width: 100%;

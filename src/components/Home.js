@@ -9,6 +9,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import DataState from './DataState';
+import Button from '@material-ui/core/Button';
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,8 +26,17 @@ const useStyles = makeStyles((theme) => ({
         fontSize: theme.typography.pxToRem(20),
         flexBasis: '100%',
         flexShrink: 0,
-        marginLeft:'10%',
-        fontWeight:'bold'
+        marginLeft:'20%',
+        fontWeight:'bold',
+        fontSize:"1.7em",
+    },
+    headings: {
+        fontSize: theme.typography.pxToRem(20),
+        flexBasis: '100%',
+        flexShrink: 0,
+        marginLeft:'40%',
+        fontWeight:'bold',
+        fontSize:"1.7em",
     },
     secondaryHeading: {
         fontSize: theme.typography.pxToRem(15),
@@ -37,7 +47,12 @@ const useStyles = makeStyles((theme) => ({
     },
     iconmargin:{
         marginRight:'10%',
-    }
+    },
+    margin: {
+        margin: theme.spacing(1),
+        border:"2px",
+        fontSize:"1.5em",
+      },
 }));
 
 const Home = () => {
@@ -47,6 +62,7 @@ const Home = () => {
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
+    // const [comp,setComp] = useState(Login);
     return (
         <div class="body">
             <div class="left">
@@ -63,12 +79,12 @@ const Home = () => {
                             id="panel2bh-header"
                             className={classes.iconmargin}
                         >
-                            <Typography className={classes.heading}>상태</Typography>
-
+                            <Typography className={classes.headings}>상태</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <span>
-                                123
+                                <Button  size="large" className={classes.margin}>현재시스템</Button>
+                                <Button size="large" className={classes.margin}>통계</Button>
                             </span>
                         </AccordionDetails>
                     </Accordion>
