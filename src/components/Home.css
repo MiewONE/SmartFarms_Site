@@ -21,20 +21,27 @@ span{
     width:40%;
     max-width: 220px;
     
-    
 }
 .left_top{
     background-color: darkkhaki;
     height: 22%;
     width: 220px;
     max-width: 220px;
+    max-height: 22%;
 }
 .right_top {
     width: 100%;
+    display: block;
 }
-
+.rigt_body{
+    display: inline-block;
+    padding-top: 3px;
+    width:100%;
+}
 .body .right{
     float :left;
-    width:70%;
+    display: inline-block;
+    width:88%;
+    padding-bottom: 3px;
     /* background-color: goldenrod; */
 }

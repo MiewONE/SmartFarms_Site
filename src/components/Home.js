@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState }from 'react';
 import './Home.css'
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -8,9 +8,11 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import DataState from './DataState';
+import DataState from './State/DataState';
 import Button from '@material-ui/core/Button';
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
+import { HoverState } from '@devexpress/dx-react-chart';
+import Graph from './State/Graph'
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -43,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
     color:{
-        // background : 'red',
+        border:'2px'
     },
     iconmargin:{
         marginRight:'10%',
@@ -61,8 +63,10 @@ const Home = () => {
 
     const handleChange = (panel) => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
+
     };
-    // const [comp,setComp] = useState(Login);
+    const [comp,setComp] = useState();
+    const [col,setCol] = useState();
     return (
         <div class="body">
             <div class="left">
@@ -72,7 +76,9 @@ const Home = () => {
                 </div>
 
                 <div>
-                    <Accordion className={classes.color} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
+                    <Accordion className={classes.color} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}
+                        
+                    >
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
                             aria-controls="panel2bh-content"
@@ -83,8 +89,8 @@ const Home = () => {
                         </AccordionSummary>
                         <AccordionDetails>
                             <span>
-                                <Button  size="large" className={classes.margin}>현재시스템</Button>
-                                <Button size="large" className={classes.margin}>통계</Button>
+                                <Button onClick={()=>setComp(<DataState/>)} size="large" className={classes.margin}>현재시스템</Button>
+                                <Button onClick={()=>setComp(<Graph/>)}size="large" className={classes.margin}>통계</Button>
                             </span>
                         </AccordionDetails>
                     </Accordion>
@@ -118,19 +124,22 @@ const Home = () => {
             </div>
             <div class="right">
                 <div class="right_top">
-                    <AppBar position="static" color="default">
+                    <AppBar position="static" color="White">
                         <Toolbar variant="dense">
-
                             <Typography variant="h6" color="inherit">
                                 사용자
                             </Typography>
                         </Toolbar>
                     </AppBar>
+                    
                 </div>
-                <div>
-                    <DataState/>
+                <div class="rigt_body">
+                    <main children={comp}/>
                 </div>
             </div>
+            
+            
+            
         </div>
     );
 };
