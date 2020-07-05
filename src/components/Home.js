@@ -13,6 +13,7 @@ import Button from '@material-ui/core/Button';
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
 import { HoverState } from '@devexpress/dx-react-chart';
 import Graph from './State/Graph'
+import Clock from 'react-live-clock'
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -55,6 +56,11 @@ const useStyles = makeStyles((theme) => ({
         border:"2px",
         fontSize:"1.5em",
       },
+    times:{
+        flexGrow: 1,
+        fontWeight:'bold',
+        fontSize:'1.4em',
+    }
 }));
 
 const Home = () => {
@@ -67,6 +73,7 @@ const Home = () => {
     };
     const [comp,setComp] = useState();
     const [col,setCol] = useState();
+    
     return (
         <div class="body">
             <div class="left">
@@ -123,11 +130,14 @@ const Home = () => {
                 </div>
             </div>
             <div class="right">
-                <div class="right_top">
-                    <AppBar position="static" color="White">
+                <div class="right_top" className={classes.times}>
+                    <AppBar position="static" color="transparent">
                         <Toolbar variant="dense">
-                            <Typography variant="h6" color="inherit">
-                                사용자
+                            <Typography variant="h6" color="inherit" className={classes.times}>
+                                root
+                            </Typography>
+                            <Typography variant="h6" color="inherit" >
+                                <Clock format={'YYYY년MM월DD일 HH:mm:ss'} ticking={true}/>
                             </Typography>
                         </Toolbar>
                     </AppBar>
@@ -135,6 +145,7 @@ const Home = () => {
                 </div>
                 <div class="rigt_body">
                     <main children={comp}/>
+                    
                 </div>
             </div>
             

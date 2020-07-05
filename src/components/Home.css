@@ -29,6 +29,9 @@ span{
     max-width: 220px;
     max-height: 22%;
 }
+.timez{
+    float: right;
+}
 .right_top {
     width: 100%;
     display: block;

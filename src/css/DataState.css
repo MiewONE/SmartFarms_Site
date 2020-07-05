@@ -1,0 +1,19 @@
+.span_text{
+    margin-top: 110%;
+}
+.div_chart{
+    /* style={{ display: 'inline-block',width:'50%'}} */
+    display: inline-block;
+    width: 46%;
+    margin: 2%;
+}
+.data_span{
+    font-weight: bold;
+    font-size: 1.7em;
+    text-align: center;
+    padding: 10%;
+}
+
+img{
+    margin:0;
+}
