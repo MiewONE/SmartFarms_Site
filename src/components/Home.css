@@ -7,6 +7,8 @@ span{
 }
 .body {
     display: flex;
+    margin:0 auto;
+    width: 70%;
     height: 20%;
     /* background-color: darkturquoise; */
 }

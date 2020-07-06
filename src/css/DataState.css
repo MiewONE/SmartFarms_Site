@@ -4,16 +4,24 @@
 .div_chart{
     /* style={{ display: 'inline-block',width:'50%'}} */
     display: inline-block;
-    width: 46%;
-    margin: 2%;
+    width: 40%;
+    margin: 5%;
 }
 .data_span{
     font-weight: bold;
-    font-size: 1.7em;
-    text-align: center;
+    font-size: 180%;
+    /* text-align: center; */
     padding: 10%;
 }
-
+.server_icon{
+    width:100%;
+    margin:10% 0% 10% 20%;
+}
 img{
     margin:0;
+    width: 30%;
+}
+.img_head{
+    margin:0;
+    width: 70%;
 }
