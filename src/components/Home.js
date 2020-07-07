@@ -9,6 +9,7 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import DataState from './State/DataState';
+import Zoomchart from './State/zoomchart';
 import Button from '@material-ui/core/Button';
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
 import { HoverState } from '@devexpress/dx-react-chart';
@@ -98,6 +99,7 @@ const Home = () => {
                             <span>
                                 <Button onClick={()=>setComp(<DataState/>)} size="large" className={classes.margin}>현재시스템</Button>
                                 <Button onClick={()=>setComp(<Graph/>)}size="large" className={classes.margin}>통계</Button>
+                                <Button onClick={()=>setComp(<Zoomchart/>)}size="large" className={classes.margin}>통계2</Button>
                             </span>
                         </AccordionDetails>
                     </Accordion>

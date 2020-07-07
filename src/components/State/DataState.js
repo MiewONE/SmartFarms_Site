@@ -45,7 +45,7 @@ const DataState = () => {
                     현재 시스템의 상태를 보여줍니다.
                 </span>
             </div>
-            <div style={{ display: 'inline-block', backgroundColor: 'white', margin: '0% 0% 5% 5%', width: '50%' }}>
+            <div style={{ float:'left', backgroundColor: 'white', margin: '0% 0% 5% 5%', width: '50%' }}>
                 <Paper
                     elevation={3}
                     variant="outlined"
@@ -97,19 +97,28 @@ const DataState = () => {
 
                 </Paper>
             </div>
-            <div style={{ display: 'inline-block', backgroundColor: 'white', margin: '0% 5% 5% 5%', width: '30%' }}>
+            <div style={{  float:'left', backgroundColor: 'white', margin: '0% 5% 5% 8%', width: '30%' }}>
             <Paper
                     elevation={3}
                     variant="outlined"
                 >
                 <img src="https://tekladesign.net/wp-content/uploads/2017/03/server.png" alt="server" class="server_icon"/><br/>
-                <span style={{fontSize:'2em',margin:'0% 0% 10% 10%'}}>
-                서버 정상 작동중
-                </span>
+                <Table>
+                    <TableRow>
+                    <TableCell></TableCell>
+                    <TableCell align="center">
+                    <span class="spans">서버 상태  </span>
+                    </TableCell >
+                    <TableCell align="right">
+                    <img src="https://i.ibb.co/NZPGRk7/off.png" alt="on" />
+                    </TableCell>
+                    <TableCell></TableCell>
+                    </TableRow>
+                </Table>
                 
                 </Paper>
             </div>
-            <div style={{ display: 'inline-block', backgroundColor: 'white', margin: '0% 5% 5% 5%', width: '90%' }}>
+            <div style={{display:'inline-block',margin: '0% 5% 5% 5%', width: '90%' }}>
             <Paper
                     elevation={3}
                     variant="outlined"
