@@ -47,7 +47,10 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
     color:{
-        border:'2px'
+        border:'2px',
+    },
+    menuvisible:{
+        
     },
     iconmargin:{
         marginRight:'10%',
@@ -85,7 +88,6 @@ const Home = () => {
 
                 <div>
                     <Accordion className={classes.color} expanded={expanded === 'panel2'} onChange={handleChange('panel2')}
-                        
                     >
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
@@ -101,21 +103,6 @@ const Home = () => {
                                 <Button onClick={()=>setComp(<Graph/>)}size="large" className={classes.margin}>통계</Button>
                                 <Button onClick={()=>setComp(<Zoomchart/>)}size="large" className={classes.margin}>통계2</Button>
                             </span>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel3bh-content"
-                            id="panel3bh-header"
-                            className={classes.iconmargin}
-                        >
-                            <Typography className={classes.heading}>정보 수정</Typography>
-                            
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                               </Typography>
                         </AccordionDetails>
                     </Accordion>
                     

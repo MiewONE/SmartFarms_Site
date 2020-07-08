@@ -26,11 +26,11 @@ span{
 }
 .left_top{
     background-color: darkkhaki;
-    min-height: 5;
-    height: 5%;
+    min-height: 50px;
+    height: 50px;
     width: 220px;
     max-width: 220px;
-    max-height: 5%;
+    max-height: 50px;
 }
 .timez{
     float: right;

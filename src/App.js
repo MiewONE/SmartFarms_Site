@@ -4,8 +4,14 @@ import Notfound from './components/Notfound'
 import Home from './components/Home'
 import Paper from '@material-ui/core/Paper';
 import { BrowserRouter as Router, Route,Switch } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 const App = () => {
   return (
+    <div>
+      <Helmet>
+        <title>Farmming</title>
+      </Helmet>
+    
     <Router>
       <div>
         <Paper elevation={3}>
@@ -18,6 +24,7 @@ const App = () => {
         
       </div>
     </Router>
+    </div>
 
   );
 };
